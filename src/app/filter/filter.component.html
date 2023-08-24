@@ -2,12 +2,17 @@
     <span>Filter: </span>
 
     <input type="radio" name="filter" value="Availbale" />
-    <span>All Courses</span>
+    <span>{{'All Courses('+all+')'}}</span>
+
+    <!--This is a combination of static text ("All Courses(" and ")") and a dynamic value (all). The parentheses () are used to enclose and concatenate the dynamic value with the static text
+    all: This is most likely a variable or a property from the component's data. The value of the all variable will be dynamically inserted into the string at the position of all
+    The ++ operator is a shorthand increment operator in many programming languages
+    The + symbol is used for string concatenation-->
+    
+    <input type="radio" name="filter" value="Availbale" />
+    <span>{{'Free Courses('+free+')'}}</span>
 
     <input type="radio" name="filter" value="Availbale" />
-    <span>Free Courses</span>
-
-    <input type="radio" name="filter" value="Availbale" />
-    <span>Premium Courses</span>
+    <span>{{'Premium Courses('+premium+')'}}</span>
 
 </div>

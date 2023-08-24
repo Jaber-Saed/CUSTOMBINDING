@@ -1,5 +1,7 @@
 .filter-container{
-    margin: 10px 20px;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
 }
 
 input[type = radio]{
