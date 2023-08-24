@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HeaderComponent } from './header/header.component';
+import { SerchComponent } from './serch/serch.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    HeaderComponent
+    HeaderComponent,
+    SerchComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule
