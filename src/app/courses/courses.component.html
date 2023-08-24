@@ -1,6 +1,7 @@
 <div >
   <app-serch></app-serch>
   <app-filter
+    (myEvent)="handleEvent($event)"
     [Total]="getTotalCourses()"
     [beblash]="getTotalFreeCourses()"
     [bemasare]="getTotalPremiumCourses()"

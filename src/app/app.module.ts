@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { SerchComponent } from './serch/serch.component';
 import { FilterComponent } from './filter/filter.component';
 import { SomkeComponent } from './somke/somke.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SomkeComponent } from './somke/somke.component';
     SomkeComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule
   ],
   providers: [],

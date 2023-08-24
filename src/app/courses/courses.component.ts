@@ -24,7 +24,7 @@ export class CoursesComponent {
       description: 'In this course you will learn the fundamentals of JavaScript.Th'
     },
     {
-      id: 104, name: 'Telwind for beginners', author: 'John Heikela', duration: 48, type: 'Premium',
+      id: 104, name: 'Telwind for beginners', author: 'John Heikela', duration: 48, type: 'Free',
       price: 30.00, ratings: 3.5, image: '../../assets/wallpaer.png',
       description: 'In this course you will learn the fundamentals of JavaScript.Th'
     },
@@ -67,4 +67,7 @@ export class CoursesComponent {
     return this.courses.filter(course => course.type === 'Premium').length;
   }
 
+  handleEvent(data: Event) {
+    console.log(data); // Output: Event emitted from child
+  }
 }

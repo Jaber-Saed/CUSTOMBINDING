@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-filter',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FilterComponent {
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
 
@@ -15,4 +16,18 @@ export class FilterComponent {
   @Input('Total') all: number = 0;
   @Input('beblash') free: number = 0;
   @Input('bemasare') premium: number = 0;
+
+  selectedRadioButtonValue: string = 'All';
+
+  whatsteus() {
+    return console.log(this.selectedRadioButtonValue);
+  }
+
+  @Output()
+  filterRadioButtionSelectionChanged: EventEmitter<string> = new EventEmitter<string>();
+
+  onRadioButtonSelectionChanged() {
+    this.filterRadioButtionSelectionChanged.emit(this.selectedRadioButtonValue);
+    console.log(this.selectedRadioButtonValue)
+  }
 }
