@@ -70,4 +70,12 @@ export class CoursesComponent {
   handleEvent(data: Event) {
     console.log(data); // Output: Event emitted from child
   }
+
+  courseCountRadioButton: string = 'All';
+
+  onFilterRadioButtonChanged(data: string) {
+    this.courseCountRadioButton = data;
+    //console.log(this.courseCountRadioButton);
+  }
+
 }
