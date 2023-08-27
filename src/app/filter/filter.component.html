@@ -9,7 +9,7 @@
     type="radio"
     name="filter"
     value="All"
-    (change)="whatsteus()"
+    (change)="onRadioButtonSelectionChanged()"
     [(ngModel)]="selectedRadioButtonValue"
   />
   <span>{{ "All Courses(" + all + ")" }}</span>
@@ -18,7 +18,7 @@
     type="radio"
     name="filter"
     value="Free"
-    (change)="whatsteus()"
+    (change)="onRadioButtonSelectionChanged()"
     [(ngModel)]="selectedRadioButtonValue"
   />
   <span>{{ "Free Courses(" + free + ")" }}</span>
@@ -27,7 +27,7 @@
     type="radio"
     name="filter"
     value="Premium"
-    (change)="whatsteus()"
+    (change)="onRadioButtonSelectionChanged()"
     [(ngModel)]="selectedRadioButtonValue"
   />
   <span>{{ "Premium Courses(" + premium + ")" }}</span>
