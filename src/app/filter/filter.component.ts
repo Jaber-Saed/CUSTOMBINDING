@@ -27,7 +27,6 @@ export class FilterComponent {
   filterRadioButtionSelectionChanged: EventEmitter<string> = new EventEmitter<string>();
 
   onRadioButtonSelectionChanged() {
-    
     this.filterRadioButtionSelectionChanged.emit(this.selectedRadioButtonValue);
     // console.log(this.selectedRadioButtonValue);
   };

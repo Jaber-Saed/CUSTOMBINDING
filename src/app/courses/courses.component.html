@@ -1,15 +1,16 @@
 <div>
-  <app-serch></app-serch>
-  <app-filter
+  <app-serch (searchTextChanged) ="onSeaarchTextEntered($event)" ></app-serch>
+  <app-filter (filterRadioButtionSelectionChanged)="onFilterRadioButtonChanged($event)"
     [Total]="getTotalCourses()"
     [beblash]="getTotalFreeCourses()"
     [bemasare]="getTotalPremiumCourses()"
-    (filterRadioButtionSelectionChanged)="onFilterRadioButtonChanged($event)"
   ></app-filter>
 </div>
 
 <ng-container *ngFor="let course of courses">
+  <!--courseCountRadioButton === 'All' || courseCountRadioButton === course.type -->
   <div class="course-container" *ngIf="courseCountRadioButton === 'All' || courseCountRadioButton === course.type ">
+  <div class="course-container" *ngIf="searchText === '' || course.name.toLowerCase().includes(searchText) ">
     <div class="couse-card">
       <div>
         <img [src]="course.image" style="width: 220px; height: 140px" />
@@ -35,4 +36,7 @@
       </div>
     </div>
   </div>
+  </div>
 </ng-container>
+
+

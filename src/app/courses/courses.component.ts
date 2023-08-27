@@ -68,14 +68,21 @@ export class CoursesComponent {
   }
 
   handleEvent(data: Event) {
-    console.log(data); // Output: Event emitted from child
+   // console.log(data); // Output: Event emitted from child
   }
 
   courseCountRadioButton: string = 'All';
 
+  searchText: string = ''
+
   onFilterRadioButtonChanged(data: string) {
     this.courseCountRadioButton = data;
-    //console.log(this.courseCountRadioButton);
   }
+
+  onSeaarchTextEntered(searchValue: string){
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  }
+
 
 }
